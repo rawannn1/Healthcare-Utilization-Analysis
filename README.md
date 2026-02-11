@@ -1,8 +1,7 @@
-# Healthcare-Utilization-Analysis
 
 # Healthcare Utilization Analysis
 
-A simple, beginner-friendly Python script to analyze hospital visit data.
+A simple, beginner-friendly Python script to analyze hospital visit data using Google Colab.
 
 ## What It Does
 
@@ -16,18 +15,25 @@ Answers real healthcare questions:
 - Billing analysis
 - Cost trends over time
 
-## Steps
+## Quick Start (Google Colab)
 
-### 1. Install Dependencies
-```bash
-pip install pandas matplotlib
-```
+### 1. Get the Data
+Download from Kaggle: https://www.kaggle.com/datasets/prasad22/healthcare-dataset
 
-### 2. Add Your Data
-Place your `healthcare_dataset.csv` in the same folder as `analyze.py`
+### 2. Open Google Colab
+Go to: https://colab.research.google.com
 
-### 3. Run It
+### 3. Create New Notebook
+Click "New notebook"
 
+### 4. Upload Data
+Click folder icon → Upload → Select `healthcare_dataset.csv`
+
+### 5. Paste the Code
+Copy the entire code from `analyze.py` and paste it into a Colab cell
+
+### 6. Run It
+Press **Shift + Enter**
 
 ## Output
 
@@ -43,15 +49,22 @@ The script prints:
 And creates:
 - `healthcare_analysis.png` - Cost trend chart
 
-## Files
+## Data Source:
+**Kaggle Healthcare Dataset**
+https://www.kaggle.com/datasets/prasad22/healthcare-dataset
 
-- `analyze.py` - Main analysis script
-- `healthcare_dataset.csv` - Data
-- `README.md` 
+Dataset contains:
+- 55,500+ hospital visit records
+- Patient demographics
+- Admission/discharge dates
+- Medical conditions
+- Medications
+- Billing amounts
+- Test results
 
 ## Data Requirements
 
- CSV needs these columns:
+Your CSV needs these columns:
 - `Date of Admission`
 - `Discharge Date`
 - `Admission Type`
@@ -63,9 +76,8 @@ And creates:
 ## Example Output
 
 ```
-Total rows: 55502
-
-TOTAL visits: 55502
+HOSPITAL VISITS
+Total visits: 55,502
 
 Visits by admission type:
 Urgent       18367
@@ -81,8 +93,14 @@ Median stay: 25
 ...
 ```
 
-## Code Structure
+## Files
+
+- `analyze.py` - Main analysis script
+- `README.md` - This file
+
+## Code Structure:
 The script follows this simple flow:
+
 1. Load data
 2. Convert dates
 3. Calculate length of stay
